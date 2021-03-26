@@ -5,5 +5,7 @@ const server = axios.create({
 });
 
 export const request = async (type) => {
-  console.log(await server.get(type))
+  const res = await server.get(type)
+
+  return res.data
 }
